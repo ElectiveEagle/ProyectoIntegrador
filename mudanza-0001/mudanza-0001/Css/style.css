@@ -34,6 +34,24 @@ body {
     gap: 15px;                  
 }
 
+/* Grupos en la barra de navegacion */
+.nav-izquierda a {
+    font-size: 20px;
+    background-color: rgb(93, 93, 207); 
+    flex: 1;
+}
+
+.nav-centro {
+    flex: 1;
+    text-align: center;
+    padding-left: 300px;
+}
+
+.nav-derecha {
+    flex: 1;
+    text-align: right;
+}
+
 /* Barra de búsqueda */
 .barra-busqueda {
     display: flex;
@@ -65,7 +83,9 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgb(93, 93, 207);
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: rgb(93, 93, 207); 
     box-shadow:  0px 4px 10px rgba(0,0,0,0.2);
     border-radius: 5px;
     z-index: 1000;
@@ -79,31 +99,14 @@ body {
 }
 
 .dropdown-content a:hover {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
+    color: rgb(93, 93, 207);
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-
-/* Grupos en la barra de navegacion */
-.nav-izquierda a {
-    font-size: 20px;
-    background-color: rgb(93, 93, 207); 
-    flex: 1;
-}
-
-.nav-centro {
-    flex: 1;
-    text-align: center;
-    padding-left: 300px;
-}
-
-.nav-derecha {
-    flex: 1;
-    text-align: right;
-}
 
 /* Estilo de enlaces */
 .cabezera a {
@@ -294,7 +297,7 @@ body {
 h1 {
     color: rgb(93, 93, 207);
     text-align: center;
-    padding-top: 50px;
+    padding-top: 200px;
 }
 
 table {
@@ -335,6 +338,41 @@ tr:hover {
 
 .estado.entregado {
     color: #27ae60;
+}
+
+/*preguntas frecuentes*/
+.PreguntasF {
+    width: 80%;
+    margin: 50px auto;
+    padding: 50px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.PreguntasF h2 {
+    text-align: center;
+    color: rgb(93, 93, 207);
+    margin-bottom: 20px;
+}
+
+details {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+
+details[open] {
+    background: #eef2ff;
+    border-color: rgb(93, 93, 207);
 }
 
 /* Footer */
