@@ -10,54 +10,37 @@
 
     <!-- Barra de navegación -->
     <header class="cabezera">
-     <nav>
-        <div class="nav-izquierda">
+    <nav>
+        <section class="nav-izquierda">
             <a href="index.html">CTS</a>
-        </div>
+        </section>
 
-        <div class="nav-centro">
-            <a href="Trayectoria.html">TRAYECTORIA</a>
-
-            <div class="dropdown">
-             <button class="dropbtn">AYUDA</button>
-               <div class="dropdown-content">
-                 <a href="faq.html">Preguntas Frecuentes</a>
-                 <a href="contacto.html">Como usar CTS</a>
-                 <a href="soporte.html">Politicas</a>
-               </div>
-            </div>
-            
-            <form class="barra-busqueda" action="busqueda.html" method="get">
-                <input type="text" name="q" placeholder="Buscar...">
-            </form>
-        </div>
-
-        <div class="nav-derecha">
+        <section class="nav-derecha">
             <a href="inicio.html">INICIO</a>
             <a href="Registro.html">REGISTRO</a>
-        </div>
-     </nav>
-    </header>
+        </section>
+    </nav>
+</header>
 
-    <!-- Formulario flotante de registro -->
-    <div class="registro-flotante">
-        <h2>Crear Cuenta</h2>
+<!-- Formulario flotante de registro -->
+<article class="registro-flotante">
+    <h2>Crear Cuenta</h2>
 
-        <input type="text" placeholder="Nombre completo" required>
-        <input type="email" placeholder="Correo electrónico" required>
-        <input type="tel" placeholder="Teléfono" required>
-        <input type="password" placeholder="Contraseña" required>
+    <input type="text" placeholder="Nombre completo" required>
+    <input type="email" placeholder="Correo electrónico" required>
+    <input type="tel" placeholder="Teléfono" required>
+    <input type="password" placeholder="Contraseña" required>
 
-        <h2>Datos transportadores</h2>
-        <input type="text" placeholder="Licencia de conducción" >
-        <input type="text" placeholder="Papeles del vehículo" >
+    <h2>Datos transportadores</h2>
+    <input type="text" placeholder="Licencia de conducción">
+    <input type="text" placeholder="Papeles del vehículo">
 
-        <label>
-            <input type="checkbox" required> Acepto los términos y condiciones
-        </label>
+    <label>
+        <input type="checkbox" required> Acepto los términos y condiciones
+    </label>
 
-        <button onclick="registrar()">Registrarse</button>
-    </div>
+    <button onclick="registrar()">Registrarse</button>
+</article>
 
 </body>
 </html>
