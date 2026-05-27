@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: url("imagenes/LogoCTCS.jpeg")no-repeat center center fixed;
+    background: url("../imagenes/Fondo2.png") no-repeat center center fixed;
     background-size: cover;
     color: #333;
     line-height: 1.6;
@@ -125,6 +125,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: rgba(255,255,255,0.9);
     margin: 120px auto 40px auto;
     padding: 30px;
     width: 80%;
@@ -132,8 +133,7 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-.dere {
-    
+.dere {    
     padding: 10px;
     font-size: 15px;
 }
@@ -295,9 +295,10 @@ body {
 
 /* Boton trayectoria */
 h1 {
-    color: rgb(93, 93, 207);
+    color: white;
     text-align: center;
     padding-top: 200px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 }
 
 table {
@@ -307,6 +308,7 @@ table {
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     border-radius: 10px;
     overflow: hidden;
+    background-color: white;
 }
 
 th, td {
