@@ -6,141 +6,134 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: url("../imagenes/WhatsApp Image 2026-02-22 at 4.40.11 PM.jpeg") no-repeat center center fixed;
+    background: url("../imagenes/Fondo2.png") no-repeat center center fixed;
     background-size: cover;
     color: #333;
     line-height: 1.6;
 }
 
-main{
-    flex: 1;
-}
-
-.perfil{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#fotoPerfil{
-
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    cursor: pointer;
-}
-
-#subirFoto{
-    margin-top: 10px;
-}
-
-.perfil {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    color: white;
-
-    font-weight: bold;
-    margin-left: 10px;
-}
-
-.panelPerfil {
-    display: none;
-    position: absolute;
-    top: 100px;
-    left: 20px;
-    background: white;
-    padding: 15px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-    width: 280px;
-    z-index: 1000;
-}
-
-.panelPerfil p {
-    background: #f2f2f2;
-    padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    font-size: 20px;
-}
-/* 
-.panelPerfil{
-    position: relative;
-} */
-
-.cerrarPanel{
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    border: none;
-    background: red;
-    color: white;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-weight: bold;
-}
-
 
 /* Barra de navegación */
-.cabezera {
+.cabezera nav {
     display: flex;
-    gap: 8rem;
+    justify-content: space-between; 
+    align-items: center;
     background-color: rgb(93, 93, 207);
     padding: 15px;
-    text-align: center;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
 }
 
-.cabezera nav.izqui {
-    margin-top: 25px;
-    display: flex;
-    gap: 2rem;
-    padding-left: 5rem;
+.nav-centro {
+    flex: 1;
+    display: flex;              
+    justify-content: center;   
+    align-items: center;        
+    gap: 15px;                  
 }
 
-.cabezera nav.dere {
-    margin-top: 13px;
-    display: flex;
-    gap: 2rem;
-    padding-left: 15rem;
+/* Grupos en la barra de navegacion */
+.nav-izquierda a {
+    font-size: 20px;
+    background-color: rgb(93, 93, 207); 
+    flex: 1;
 }
 
-.cabezera a {
+.nav-centro {
+    flex: 1;
+    text-align: center;
+    padding-left: 300px;
+}
+
+.nav-derecha {
+    flex: 1;
+    text-align: right;
+}
+
+/* Barra de búsqueda */
+.barra-busqueda {
+    display: flex;
+    align-items: center;
+}
+
+.barra-busqueda input {
+    padding: 6px 15px;
+    border: 1px solid rgb(187, 187, 210);
+    border-radius: 5px 5px;
+    outline: none;
+}
+
+/* Dropdown para boton ayuda */
+.dropdown {
     position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 15px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: rgb(93, 93, 207); 
+    box-shadow:  0px 4px 10px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    color: rgb(93, 93, 207);
+    padding: 15px 15px;
+    display: block;
+    border-radius: 5px;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(93, 93, 207);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Estilo de enlaces */
+.cabezera a {
     color: white;
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
-
 }
 
 .cabezera a:hover {
-    color: #e31c19;
+    color: rgb(161, 161, 205);
 }
 
-/* Contenedor principal */
+/* Contenedor boton CTS */
 .conten {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: white;
+    background: rgba(255,255,255,0.9);
     margin: 120px auto 40px auto;
     padding: 30px;
     width: 80%;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-.dere {
-
+.dere {    
     padding: 10px;
     font-size: 15px;
 }
@@ -153,7 +146,7 @@ main{
 
 /* Sección mudanza */
 .mudanza {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255,255,255,0.9);
     margin: 20px auto;
     padding: 20px;
     width: 80%;
@@ -167,7 +160,7 @@ main{
 
 /* Formulario */
 .agenda {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255,255,255,0.9);
     margin: 20px auto;
     padding: 20px;
     width: 80%;
@@ -180,8 +173,7 @@ main{
     gap: 10px;
 }
 
-.agenda input,
-.agenda button {
+.agenda input, .agenda button {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -195,12 +187,296 @@ main{
 }
 
 .agenda button:hover {
-    background: #e31c19;
+    background: rgb(161, 161, 205);
 }
+
+/* Login flotante del boton de inicio */
+.login-flotante{
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 500;
+}
+
+.login-flotante h2{
+    text-align: center;
+    margin-bottom: 10px;
+    color: rgb(93, 93, 207);
+}
+
+.login-flotante h3{
+    font-size: 16px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.login-flotante input{
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #b4b4b4;
+    border-radius: 5px;
+}
+
+.login-flotante button{
+    padding: 10px;
+    background: rgb(93, 93, 207);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.login-flotante button:hover{
+    background: rgb(161, 161, 205);
+}
+
+/* Registro flotante boton de registro */
+.registro-flotante{
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.registro-flotante h2{
+    text-align: center;
+    margin-bottom: 10px;
+    color: rgb(93, 93, 207);
+}
+
+.registro-flotante h3{
+    font-size: 16px;
+    margin-top: 10px;
+    color: #333;
+}   
+
+.registro-flotante input{
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #b4b4b4;
+    border-radius: 5px;
+}
+
+.registro-flotante label{
+    font-size: 14px;
+    color: #555;
+}
+
+.registro-flotante button{
+    padding: 10px;
+    background: rgb(93, 93, 207);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.registro-flotante button:hover{
+    background: rgb(161, 161, 205);
+}
+
+/* Boton trayectoria */
+h1 {
+    color: white;
+    text-align: center;
+    padding-top: 200px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+table {
+    width: 90%;
+    margin: 40px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+     
+th {
+    background-color: rgb(93, 93, 207);
+    color: white;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.estado {
+    font-weight: bold;
+}
+
+.estado.en-preparacion {
+    color: #e31c19;
+}
+
+.estado.en-transito {
+    color: #2980b9;
+}
+
+.estado.entregado {
+    color: #27ae60;
+}
+
+/*preguntas frecuentes*/
+.PreguntasF {
+    width: 80%;
+    margin: 50px auto;
+    padding: 50px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.PreguntasF h2 {
+    text-align: center;
+    color: rgb(93, 93, 207);
+    margin-bottom: 20px;
+}
+
+details {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+
+details[open] {
+    background: #eef2ff;
+    border-color: rgb(93, 93, 207);
+}
+
+/*Como usar CTS*/
+
+.ComoUsarCTS {
+    margin: 40px auto;
+
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.ComoUsarCTS section {
+  width: 90%;
+  background: #fff;
+  margin: 40px auto;
+  border-collapse: collapse;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+
+.ComoUsarCTS h1 {
+  padding: 15px;
+  text-align: center;
+}
+
+.ComoUsarCTS section h2 {
+  color: rgb(93, 93, 207);
+  margin-bottom: 10px;
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+.ComoUsarCTS .imagen-contenedor {
+  padding: 15px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+}
+
+.ComoUsarCTS img {
+  max-width: 30%;
+  border-radius: 8px;
+  margin-right: 700px;
+  box-shadow: 0 8px 10px rgba(0,0,0,0.15);
+  
+}
+
+.ComoUsarCTS .descripcion {
+    padding: 10px;
+    font-size: 18px;
+    margin-left: 400px;
+    text-align: center;
+}
+
+/*Politicas*/
+
+    .politicas {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      padding: 30px;
+    }
+    .politicas h1 {
+      text-align: center;
+      color: rgb(93, 93, 207);
+      margin-bottom: 20px;
+    }
+    .politicas h2 {
+      color: #0066cc;
+      margin-top: 20px;
+    }
+    .politicas p {
+      margin-top: 10px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333;
+    }
+    .politicas ul {
+      margin-top: 15px;
+      padding-left: 20px;
+    }
+    .politicas ul li {
+      margin-bottom: 10px;
+    }
+    .ejemplos {
+      background: #eef2ff;
+      border-left: 4px solid rgb(93, 93, 207);
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 6px;
+    }
+    .ejemplos p {
+      margin: 8px 0;
+    }
 
 /* Footer */
 footer {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0,0,0,0.7);
     color: white;
     text-align: center;
     padding: 15px;
